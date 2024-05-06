@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { NotFound } from "../NotFound/NotFound";
 export function Course() {
     //Verranno sostituiti dalla fetch
     const courses = [
@@ -32,7 +33,7 @@ export function Course() {
     const course = courses.find((course) => course.id == id); 
 
     if (!course) {
-        return <div>Corso non trovato</div>;
+        return <NotFound/>;
     }
 
     return (
