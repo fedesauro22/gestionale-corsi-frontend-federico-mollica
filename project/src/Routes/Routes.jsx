@@ -4,6 +4,7 @@ import { MainLayout } from "../components/layouts/MainLayout/MainLayout";
 import { Users } from "../pages/Users/Users";
 import { NotFound } from "../pages/NotFound/NotFound";
 import { Home } from "../pages/Home/Home";
+import { Course } from "../pages/Course/Course";
 const routes = createBrowserRouter([
     {
         element: <MainLayout />,
@@ -20,12 +21,13 @@ const routes = createBrowserRouter([
                         element: <Courses />,
                     },
                     {
-                        path: ":id",
+                        path: "course/:id",
+                        element: <Course />,
                     },
                 ],
             },
             {
-                path: "users",
+                path: "users/",
                 element: <Users />,
             },
             {
